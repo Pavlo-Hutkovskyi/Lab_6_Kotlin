@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" prefHeight="264.0" prefWidth="287.0"
+      spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.javafx.lab_6.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0"
+                right="20.0" top="20.0"/>
+    </padding>
+    <ListView fx:id="listProducts" prefHeight="200.0"
+              prefWidth="200.0"/>
+    <HBox alignment="TOP_RIGHT" prefHeight="100.0"
+          prefWidth="200.0">
+        <Label prefHeight="17.0" prefWidth="118.0"
+               text="Оберіть категорію продукту: "/>
+        <ComboBox fx:id="categoryCombo" onAction="#filterByCategory"
+                  prefHeight="25.0" prefWidth="137.0"/>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0"
+          prefWidth="200.0">
+        <Button mnemonicParsing="false" onAction="#addNewProduct"
+                text="Додати"/>
+        <Button alignment="CENTER" mnemonicParsing="false"
+                onAction="#deleteProduct" text="Вилучити"/>
+        <Button alignment="CENTER_RIGHT" onAction="#editProduct"
+                mnemonicParsing="false" text="Змінити"/>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0"
+          prefWidth="200.0">
+        <Button alignment="CENTER_RIGHT" onAction="#getProductsIsNotTheStorage"
+                mnemonicParsing="false" text="Не на складі"/>
+    </HBox>
+</VBox>
